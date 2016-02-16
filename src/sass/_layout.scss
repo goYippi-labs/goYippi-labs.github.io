@@ -8,6 +8,7 @@ body {
     padding: 0;
     letter-spacing: 0.01em;
     background-color: $inverted-color;
+    box-sizing: border-box;
     font-kerning: normal;
     -webkit-text-size-adjust: none;
     -webkit-font-smoothing: antialiased;
@@ -20,16 +21,36 @@ body {
     padding: $default-padding;
 }
 
+.col-2 {
+    width: 48.5%;
+    float: left;
+
+    @media screen and (max-width: $breakpoint-small) {
+        width: 100%;
+        float: none;
+    }
+}
+
+.col-right {
+    float: right;
+
+    @media screen and (max-width: $breakpoint-small) {
+        float: none;
+    }
+}
+
 // Links & Buttons
 a {
     color: $markup-color;
-    text-decoration: underline;
+    text-decoration: none;
     outline: none;
+    transition: color 0.25s;
 
     &:hover {
-        color: inherit;
-        text-decoration: underline;
+        color: $secondary-color;
+        text-decoration: none;
         outline: none;
+        transition: color 0.25s;
     }
 }
 
@@ -63,7 +84,7 @@ h1, .h1 {
     letter-spacing: 0;
     color: $markup-color;
     text-align: center;
-    margin: $default-padding/2 0 16px;
+    margin: $default-padding/2 0 20px;
 }
 
 h2, .h2 {
@@ -72,7 +93,7 @@ h2, .h2 {
     line-height: 1.231;
     letter-spacing: 0;
     color: $markup-color;
-    margin: $default-padding/2 0 $default-padding/2;
+    margin: $default-padding/2 0 20px;
 }
 
 h3, .h3 {
@@ -90,11 +111,19 @@ h4, .h4 {
     line-height: 1.125;
     letter-spacing: 0;
     color: $markup-color;
-    margin: $default-padding/2 0 8px;
+    margin: $default-padding/2 0 $default-padding/2;
 }
 
 p {
-    margin: 0 0 8px;
+    margin: 0 0 $default-padding;
+}
+
+strong, b {
+    font-weight: bold;
+}
+
+em, italic {
+    color: $secondary-color;
 }
 
 blockquote, .quote {
@@ -197,5 +226,31 @@ label {
     button, input[type=submit] {
         margin-left: 4px;
         margin-right: 4px;
+    }
+}
+
+// Header
+.header {
+    color: $inverted-color;
+    background-color: $markup-color;
+
+    h1, .h1 {
+        color: $inverted-color;
+        text-align: left;
+        font-weight: bold;
+    }
+}
+
+// Footer
+.footer {
+    @extend %clearfix;
+    max-width: $primary-width;
+    margin: 0 auto;
+    padding: 0 $default-padding;
+
+    .inner {
+        padding: $default-padding 0;
+        margin: 0;
+        border-top: 1px solid $markup-color;
     }
 }

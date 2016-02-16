@@ -23,37 +23,37 @@ gulp.task('generate_css', function () {
 
 /* Generate JS */
 gulp.task('generate_js', function() {
-  return gulp.src(src + src_js + '/**/*.js')
-    .pipe(uglify())
-    .pipe(gulp.dest(dest_js))
+    return gulp.src(src + src_js + '/**/*.js')
+        .pipe(uglify())
+        .pipe(gulp.dest(dest_js))
 });
 
 /* Generate Templates */
 gulp.task('generate_templates', function() {
-  var YOUR_LOCALS = {};
+    var YOUR_LOCALS = {};
 
-  gulp.src(src + '/*.jade')
-    .pipe(jade({
-      locals: YOUR_LOCALS
-    }))
-    .pipe(gulp.dest('./'))
+    gulp.src(src + '/*.jade')
+        .pipe(jade({
+            locals: YOUR_LOCALS
+        }))
+        .pipe(gulp.dest('./'))
 });
 
 /* Watch CSS & Js */
 gulp.task('watch', function() {
-  gulp.watch(src + '/**/*.scss', ['generate_css']);
-  gulp.watch(src + '/**/*.js', ['generate_js']);
-  gulp.watch(src + '/**/*.jade', ['generate_templates']);
+    gulp.watch(src + '/**/*.scss', ['generate_css']);
+    gulp.watch(src + '/**/*.js', ['generate_js']);
+    gulp.watch(src + '/**/*.jade', ['generate_templates']);
 });
 
 /* Clean files */
 gulp.task('clean', function(){
-  return del([dest_css + '*.css', dest_js + '/*', '*.html']);
+    return del([dest_css + '*.css', dest_js + '/*', '*.html']);
 });
 
 /* Build CSS & JSS */
 gulp.task('build', [ 'generate_css','generate_js','generate_templates' ] ,function(){
-  	return require('fs').writeFile('version.txt', new Date());
+    return require('fs').writeFile('version.txt', new Date());
 });
 
 /* Default task */

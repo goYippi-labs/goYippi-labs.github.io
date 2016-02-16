@@ -2,5 +2,10 @@
 head
     meta(charset='utf-8')
     title goYippi labs
-    link(href='assets/css/main.css', rel='stylesheet')
+    link(href='assets/css/styles.css', rel='stylesheet')
     script(src='https://code.jquery.com/jquery-2.2.0.min.js')
+
+    != "<!--[if  lt IE 9]>"
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js')
+    link(rel='stylesheet', href='assets/css/styles-ie.css')
+    != "<![endif]-->"

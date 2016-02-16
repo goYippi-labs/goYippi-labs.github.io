@@ -5,11 +5,14 @@
 $font-stack: 'Droid Sans', Arial, sans-serif;
 
 $primary-color: #3c3c3b;
+$secondary-color: #878787;
 $inverted-color: #fff;
 $markup-color: #41a4b0;
 
 $primary-width: 930px;
 $default-padding: 20px;
+
+$breakpoint-small: 560px;
 
 // Clearfix Placeholder
 %clearfix {
