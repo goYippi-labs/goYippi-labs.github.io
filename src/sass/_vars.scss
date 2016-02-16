@@ -1,0 +1,27 @@
+// Google Font
+@import url("http://fonts.googleapis.com/css?family=Droid+Sans:400,700");
+
+// Default Fonts & Colors
+$font-stack: 'Droid Sans', Arial, sans-serif;
+
+$primary-color: #3c3c3b;
+$inverted-color: #fff;
+$markup-color: #41a4b0;
+
+$primary-width: 930px;
+$default-padding: 20px;
+
+// Clearfix Placeholder
+%clearfix {
+  *zoom: 1;
+
+  &:before,
+  &:after {
+    content: ' ';
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}

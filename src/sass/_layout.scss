@@ -1,0 +1,201 @@
+// General
+body {
+    font-family: $font-stack;
+    font-size: 100%;
+    line-height: 1.375;
+    color: $primary-color;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 0.01em;
+    background-color: $inverted-color;
+    font-kerning: normal;
+    -webkit-text-size-adjust: none;
+    -webkit-font-smoothing: antialiased;
+}
+
+.inner {
+    @extend %clearfix;
+    max-width: $primary-width;
+    margin: 0 auto;
+    padding: $default-padding;
+}
+
+// Links & Buttons
+a {
+    color: $markup-color;
+    text-decoration: underline;
+    outline: none;
+
+    &:hover {
+        color: inherit;
+        text-decoration: underline;
+        outline: none;
+    }
+}
+
+a.link-button, a.more-link, .button-box a {
+	font-family: $font-stack;
+    font-size: 1em;
+    line-height: 1.125;
+    letter-spacing: 0.025em;
+	color: $inverted-color;
+	padding: $default-padding/2 $default-padding/2 6px;
+	background-color: $markup-color;
+	margin: $default-padding/2 0 $default-padding/2;
+    border: 0;
+    border: 1px solid $markup-color;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.25s;
+
+    &:hover {
+        color: $inverted-color;
+        background-color: $primary-color;
+        text-decoration: none;
+    }
+}
+
+// Textformats
+h1, .h1 {
+    font-family: $font-stack;
+    font-size: 2.25em;
+    line-height: 1.11;
+    letter-spacing: 0;
+    color: $markup-color;
+    text-align: center;
+    margin: $default-padding/2 0 16px;
+}
+
+h2, .h2 {
+    font-family: $font-stack;
+    font-size: 1.625em;
+    line-height: 1.231;
+    letter-spacing: 0;
+    color: $markup-color;
+    margin: $default-padding/2 0 $default-padding/2;
+}
+
+h3, .h3 {
+    font-family: $font-stack;
+    font-size: 1.313em;
+    line-height: 1.238;
+    letter-spacing: 0;
+    color: $markup-color;
+    margin: $default-padding/2 0 $default-padding/2;
+}
+
+h4, .h4 {
+    font-family: $font-stack;
+    font-size: 1em;
+    line-height: 1.125;
+    letter-spacing: 0;
+    color: $markup-color;
+    margin: $default-padding/2 0 8px;
+}
+
+p {
+    margin: 0 0 8px;
+}
+
+blockquote, .quote {
+    @extend p;
+    font-size: 1.625em;
+    line-height: 1.231;
+}
+
+ul, ol {
+    margin: 0 0 8px;
+
+    li {
+        list-style: outside none disc;
+        margin: 2px 0 2px 0.9em;
+    }
+}
+
+ol {
+    li {
+        list-style: outside none decimal;
+    }
+}
+
+// Forms
+input[type=text], input[type=email], input[type=password], input[type=url], textarea {
+    font-family: $font-stack;
+    font-size: 1em;
+    line-height: 1.375;
+    color: $primary-color;
+	border: 0;
+    border-top: 1px solid $markup-color;
+	background-color: $inverted-color;
+	width: 99%;
+	padding: 3px 6px 1px;
+	margin-bottom: 8px;
+}
+
+textarea {
+    font-family: $font-stack;
+    font-size: 0.813em;
+    line-height: 1.385;
+	height: 120px;
+	max-width: 99%;
+    border-top: 0;
+}
+
+input[type=radio], input[type=checkbox] {
+    vertical-align: top;
+    margin-right: 6px;
+}
+
+select {
+    font-family: $font-stack;
+    font-size: 0.813em;
+    line-height: 1.385;
+	width: 100%;
+
+    option {
+        padding: 3px 6px 1px;
+    }
+}
+
+button, input[type=submit] {
+    @extend a.link-button;
+
+	padding-top: 8px;
+    cursor: pointer;
+}
+
+label {
+    font-family: $font-stack;
+    font-size: 0.813em;
+    line-height: 1.385;
+    color: $primary-color;
+}
+
+// Divider
+.clear {
+    clear: both;
+    height: 0;
+    overflow: hidden;
+}
+
+.divider {
+    @extend .clear;
+    height: 10px;
+}
+
+.line {
+    @extend .clear;
+    height: 1px;
+    border-top: 1px solid $markup-color;
+    margin: $default-padding/2 0;
+}
+
+// Centered Blocks
+.center {
+    text-align: center;
+
+    button, input[type=submit] {
+        margin-left: 4px;
+        margin-right: 4px;
+    }
+}

@@ -3,3 +3,10 @@
 # Example .gitignore files: https://github.com/github/gitignore
 /bower_components/
 /node_modules/
+
+.Spotlight-V100
+.Trashes
+.DS_Store
+Thumbs.db
+
+gulpfile.js

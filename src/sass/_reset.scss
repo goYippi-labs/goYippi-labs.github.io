@@ -1,0 +1,286 @@
+%reset {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+html {
+	@extend %reset;
+}
+body {
+	@extend %reset;
+	line-height: 1;
+}
+div {
+	@extend %reset;
+}
+span {
+	@extend %reset;
+}
+applet {
+	@extend %reset;
+}
+object {
+	@extend %reset;
+}
+iframe {
+	@extend %reset;
+}
+h1 {
+	@extend %reset;
+}
+h2 {
+	@extend %reset;
+}
+h3 {
+	@extend %reset;
+}
+h4 {
+	@extend %reset;
+}
+h5 {
+	@extend %reset;
+}
+h6 {
+	@extend %reset;
+}
+p {
+	@extend %reset;
+}
+blockquote {
+	@extend %reset;
+	quotes: none;
+	&:before {
+		content: '';
+		content: none;
+	}
+	&:after {
+		content: '';
+		content: none;
+	}
+}
+pre {
+	@extend %reset;
+}
+a {
+	@extend %reset;
+}
+abbr {
+	@extend %reset;
+}
+acronym {
+	@extend %reset;
+}
+address {
+	@extend %reset;
+}
+big {
+	@extend %reset;
+}
+cite {
+	@extend %reset;
+}
+code {
+	@extend %reset;
+}
+del {
+	@extend %reset;
+}
+dfn {
+	@extend %reset;
+}
+em {
+	@extend %reset;
+}
+img {
+	@extend %reset;
+}
+ins {
+	@extend %reset;
+}
+kbd {
+	@extend %reset;
+}
+q {
+	@extend %reset;
+	quotes: none;
+	&:before {
+		content: '';
+		content: none;
+	}
+	&:after {
+		content: '';
+		content: none;
+	}
+}
+s {
+	@extend %reset;
+}
+samp {
+	@extend %reset;
+}
+small {
+	@extend %reset;
+}
+strike {
+	@extend %reset;
+}
+strong {
+	@extend %reset;
+}
+sub {
+	@extend %reset;
+}
+sup {
+	@extend %reset;
+}
+tt {
+	@extend %reset;
+}
+var {
+	@extend %reset;
+}
+b {
+	@extend %reset;
+}
+u {
+	@extend %reset;
+}
+i {
+	@extend %reset;
+}
+center {
+	@extend %reset;
+}
+dl {
+	@extend %reset;
+}
+dt {
+	@extend %reset;
+}
+dd {
+	@extend %reset;
+}
+ol {
+	@extend %reset;
+	list-style: none;
+}
+ul {
+	@extend %reset;
+	list-style: none;
+}
+li {
+	@extend %reset;
+}
+fieldset {
+	@extend %reset;
+}
+form {
+	@extend %reset;
+}
+label {
+	@extend %reset;
+}
+legend {
+	@extend %reset;
+}
+table {
+	@extend %reset;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+caption {
+	@extend %reset;
+}
+tbody {
+	@extend %reset;
+}
+tfoot {
+	@extend %reset;
+}
+thead {
+	@extend %reset;
+}
+tr {
+	@extend %reset;
+}
+th {
+	@extend %reset;
+}
+td {
+	@extend %reset;
+}
+article {
+	@extend %reset;
+	display: block;
+}
+aside {
+	@extend %reset;
+	display: block;
+}
+canvas {
+	@extend %reset;
+}
+details {
+	@extend %reset;
+	display: block;
+}
+embed {
+	@extend %reset;
+}
+figure {
+	@extend %reset;
+	display: block;
+}
+figcaption {
+	@extend %reset;
+	display: block;
+}
+footer {
+	@extend %reset;
+	display: block;
+}
+header {
+	@extend %reset;
+	display: block;
+}
+hgroup {
+	@extend %reset;
+	display: block;
+}
+menu {
+	@extend %reset;
+	display: block;
+}
+nav {
+	@extend %reset;
+	display: block;
+}
+output {
+	@extend %reset;
+}
+ruby {
+	@extend %reset;
+}
+section {
+	@extend %reset;
+	display: block;
+}
+summary {
+	@extend %reset;
+}
+time {
+	@extend %reset;
+}
+mark {
+	@extend %reset;
+}
+audio {
+	@extend %reset;
+}
+video {
+	@extend %reset;
+}
