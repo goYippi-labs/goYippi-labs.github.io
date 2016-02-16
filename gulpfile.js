@@ -48,7 +48,7 @@ gulp.task('watch', function() {
 
 /* Clean files */
 gulp.task('clean', function(){
-    return del([dest_css + '*.css', dest_js + '/*', '*.html']);
+    return del([dest_css + '/*', dest_js + '/*', '*.html']);
 });
 
 /* Build CSS & JSS */

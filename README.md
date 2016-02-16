@@ -1,2 +1,2 @@
 # goYippi-labs
-github page >> goYippi-labs.github.io
+github page >> http://goYippi-labs.github.io
