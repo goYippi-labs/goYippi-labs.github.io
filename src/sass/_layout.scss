@@ -1,3 +1,39 @@
+
+// Mixin for Keyframes
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+// Mixin for Color Animation
+@mixin color-animation($color-type) {
+    -webkit-animation-name: $color-type; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 60s; /* Chrome, Safari, Opera */
+    -webkit-animation-iteration-count: infinite; /* Chrome, Safari, Opera */
+    animation-name: $color-type;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+}
+
+// Animations
+$list: background-color, border-color, color;
+@each $part in $list {
+    @include keyframes($part) {
+        0%   {#{$part}: $markup-color}
+        25%  {#{$part}: $goyippi-violet;}
+        50%  {#{$part}: $goyippi-red;}
+        75%  {#{$part}: $goyippi-green;}
+        100% {#{$part}: $markup-color}
+    }
+}
+
 // General
 body {
     font-family: $font-stack;
@@ -42,12 +78,13 @@ body {
 // Links & Buttons
 a {
     color: $markup-color;
+    @include color-animation(color);
     text-decoration: none;
     outline: none;
     transition: color 0.25s;
 
     &:hover {
-        color: $secondary-color;
+        color: $secondary-color !important;
         text-decoration: none;
         outline: none;
         transition: color 0.25s;
@@ -83,6 +120,7 @@ h1, .h1 {
     line-height: 1.11;
     letter-spacing: 0;
     color: $markup-color;
+    @include color-animation(color);
     text-align: center;
     margin: $default-padding/2 0 20px;
 }
@@ -93,6 +131,7 @@ h2, .h2 {
     line-height: 1.231;
     letter-spacing: 0;
     color: $markup-color;
+    @include color-animation(color);
     margin: $default-padding/2 0 20px;
 }
 
@@ -102,6 +141,7 @@ h3, .h3 {
     line-height: 1.238;
     letter-spacing: 0;
     color: $markup-color;
+    @include color-animation(color);
     margin: $default-padding/2 0 $default-padding/2;
 }
 
@@ -111,10 +151,11 @@ h4, .h4 {
     line-height: 1.125;
     letter-spacing: 0;
     color: $markup-color;
+    @include color-animation(color);
     margin: $default-padding/2 0 $default-padding/2;
 }
 
-p {
+p, dd {
     margin: 0 0 $default-padding;
 }
 
@@ -147,14 +188,19 @@ ol {
     }
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 // Forms
 input[type=text], input[type=email], input[type=password], input[type=url], textarea {
     font-family: $font-stack;
     font-size: 1em;
     line-height: 1.375;
     color: $primary-color;
-	border: 0;
-    border-top: 1px solid $markup-color;
+    border: 1px solid $markup-color;
+    @include color-animation(border-color);
 	background-color: $inverted-color;
 	width: 99%;
 	padding: 3px 6px 1px;
@@ -216,6 +262,7 @@ label {
     @extend .clear;
     height: 1px;
     border-top: 1px solid $markup-color;
+    @include color-animation(border-color);
     margin: $default-padding/2 0;
 }
 
@@ -233,11 +280,22 @@ label {
 .header {
     color: $inverted-color;
     background-color: $markup-color;
+    @include color-animation(background-color);
+
+    .inner {
+        padding: 30px $default-padding;
+    }
 
     h1, .h1 {
-        color: $inverted-color;
+        color: $inverted-color !important;
         text-align: left;
         font-weight: bold;
+        margin: 0;
+    }
+
+    img {
+        max-height: 80px;
+        width: auto;
     }
 }
 
@@ -252,5 +310,6 @@ label {
         padding: $default-padding 0;
         margin: 0;
         border-top: 1px solid $markup-color;
+        @include color-animation(border-color);
     }
 }
