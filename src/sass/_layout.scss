@@ -283,7 +283,7 @@ label {
     @include color-animation(background-color);
 
     .inner {
-        padding: 30px $default-padding;
+        padding: 35px $default-padding 30px;
     }
 
     h1, .h1 {
