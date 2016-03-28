@@ -27,9 +27,10 @@ $list: background-color, border-color, color;
 @each $part in $list {
     @include keyframes($part) {
         0%   {#{$part}: $markup-color}
-        25%  {#{$part}: $goyippi-violet;}
-        50%  {#{$part}: $goyippi-red;}
-        75%  {#{$part}: $goyippi-green;}
+        20%  {#{$part}: $goyippi-green;}
+        40%  {#{$part}: $goyippi-tan;}
+        60%  {#{$part}: $goyippi-red;}
+        80%  {#{$part}: $goyippi-violet;}
         100% {#{$part}: $markup-color}
     }
 }
