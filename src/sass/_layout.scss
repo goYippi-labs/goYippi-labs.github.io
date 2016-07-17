@@ -194,6 +194,13 @@ img {
     height: auto;
 }
 
+#github-gists {
+    a {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+    }
+}
+
 // Forms
 input[type=text], input[type=email], input[type=password], input[type=url], textarea {
     font-family: $font-stack;
@@ -284,7 +291,28 @@ label {
     @include color-animation(background-color);
 
     .inner {
+        position: relative;
+        overflow: hidden;
         padding: 35px $default-padding 30px;
+
+        &:after {
+            content: '{ }';
+            font-size: 200px;
+            display: block;
+            position: absolute;
+            right: 20px;
+            bottom: -80px;
+            opacity: 0.4;
+
+            @media screen and (max-width: $breakpoint-medium) {
+                content: '';
+                display: none;
+            }
+        }
+
+        @media screen and (max-width: $breakpoint-small) {
+            padding: 16px $default-padding 11px;
+        }
     }
 
     h1, .h1 {
@@ -295,8 +323,12 @@ label {
     }
 
     img {
-        max-height: 80px;
+        max-height: 73px;
         width: auto;
+
+        @media screen and (max-width: $breakpoint-small) {
+            max-height: 32px;
+        }
     }
 }
 
