@@ -295,6 +295,27 @@ label {
     margin: $default-padding/2 0;
 }
 
+// Blog Blox
+.blog-box {
+    padding: $default-padding/2 $default-padding;
+    margin-top: $default-padding;
+    position: relative;
+
+    &:before {
+        display: block;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.25;
+        z-index: -1;
+        background-color: $markup-color;
+        @include color-animation(background-color);
+    }
+}
+
 // Centered Blocks
 .center {
     text-align: center;
