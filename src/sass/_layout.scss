@@ -369,7 +369,7 @@ label {
             }
         }
 
-        @media screen and (max-width: $breakpoint-small) {
+        @media screen and (max-width: $breakpoint-medium) {
             padding: 15px $default-padding 12px;
         }
     }
@@ -385,7 +385,7 @@ label {
         max-height: 73px;
         width: auto;
 
-        @media screen and (max-width: $breakpoint-small) {
+        @media screen and (max-width: $breakpoint-medium) {
             max-height: 32px;
         }
     }
