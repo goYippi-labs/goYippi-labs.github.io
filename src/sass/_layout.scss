@@ -301,9 +301,25 @@ label {
     margin-top: $default-padding;
     position: relative;
 
-    &:before {
+    &:after {
+        font-family: 'Material Icons';
+        content:'\e0c9';
+        font-size: 3em;
+        color: $markup-color;
+        @include color-animation(color);
         display: block;
+        position: absolute;
+        top: 4px;
+        right: 10px;
+
+        @media screen and (max-width: $breakpoint-small) {
+            visibility: hidden;
+        }
+    }
+
+    &:before {
         content: '';
+        display: block;
         position: absolute;
         top: 0;
         left: 0;
@@ -339,7 +355,7 @@ label {
 
         &:after {
             content: '{ }';
-            font-size: 200px;
+            font-size: 12.500em;
             display: block;
             position: absolute;
             right: 20px;
