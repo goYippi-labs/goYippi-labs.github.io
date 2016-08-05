@@ -58,6 +58,10 @@ body {
     padding: $default-padding;
 }
 
+.col-1 {
+    @extend %clearfix;
+}
+
 .col-2 {
     width: 48.5%;
     float: left;
@@ -85,10 +89,17 @@ a {
     transition: color 0.25s;
 
     &:hover {
-        color: $secondary-color !important;
+        color: $primary-color !important;
         text-decoration: none;
         outline: none;
         transition: color 0.25s;
+    }
+}
+
+.col-1, .col-2 {
+    a {
+        color: $secondary-color;
+        animation: none;
     }
 }
 
@@ -98,19 +109,25 @@ a.link-button, a.more-link, .button-box a {
     line-height: 1.125;
     letter-spacing: 0.025em;
 	color: $inverted-color;
-	padding: $default-padding/2 $default-padding/2 6px;
+	padding: 6px $default-padding/2;
 	background-color: $markup-color;
-	margin: $default-padding/2 0 $default-padding/2;
-    border: 0;
-    border: 1px solid $markup-color;
+	@include color-animation(background-color);
+    border-radius: 3px;
+    margin: $default-padding/2 0 $default-padding/2;
     text-decoration: none;
     display: inline-block;
     transition: background-color 0.25s;
 
     &:hover {
-        color: $inverted-color;
-        background-color: $primary-color;
+        color: $inverted-color !important;
+        background-color: $secondary-color !important;
         text-decoration: none;
+    }
+}
+
+.col-1, .col-2 {
+    a.link-button, a.more-link, .button-box a {
+	   @include color-animation(background-color);
     }
 }
 
@@ -123,7 +140,7 @@ h1, .h1 {
     color: $markup-color;
     @include color-animation(color);
     text-align: center;
-    margin: $default-padding/2 0 20px;
+    margin: $default-padding/2 0 $default-padding;
 }
 
 h2, .h2 {
@@ -133,7 +150,7 @@ h2, .h2 {
     letter-spacing: 0;
     color: $markup-color;
     @include color-animation(color);
-    margin: $default-padding/2 0 20px;
+    margin: $default-padding/2 0 $default-padding;
 }
 
 h3, .h3 {
@@ -192,6 +209,10 @@ ol {
 img {
     max-width: 100%;
     height: auto;
+}
+
+dt {
+    margin: 0 0 $default-padding/4;
 }
 
 #github-gists {
