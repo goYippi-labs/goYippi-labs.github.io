@@ -7,7 +7,13 @@ $.githubUser = function(username, gitpart, callback) {
 $.fn.loadGitInfos = function(username, gitpart) {
     // Credit: http://yonaba.github.io/2012/08/14/List-your-GitHub-projects-using-JavaScript-and-jQuery.md.html
 
-    this.html("<span>Querying GitHub for " + username + "'s " + gitpart + "...</span>");
+    if (gitpart == 'gists') {
+        profil_url = 'https://gist.github.com/' + username;
+    } else {
+        profil_url = 'https://github.com/' + username;
+    }
+
+    this.html("<p class='ie-hidden'>Querying GitHub for " + username + "'s " + gitpart + "...</p><a href='" + profil_url + "' class='link-button'>View all " + gitpart + "</a>");
 
     var target = this;
     $.githubUser(username, gitpart, function(data) {
@@ -41,7 +47,7 @@ $.fn.loadGitInfos = function(username, gitpart) {
 $.fn.loadBlog = function(url) {
     //Credit: http://stackoverflow.com/questions/10943544/how-to-parse-an-rss-feed-using-javascript
 
-    this.html("<span>Querying goYippi Blog for " + url + "...</span>");
+    this.html("<p class='ie-hidden'>Querying goYippi Blog for " + url + "...</p>");
 
     var target = this;
 

@@ -1,6 +1,10 @@
 // Imports
 @import 'vars';
 
+.ie-hidden {
+    display: none;
+}
+
 .inner {
     width: $primary-width;
 }
@@ -9,6 +13,10 @@
     padding: 0;
 
     &:before {
+        display: none;
+    }
+
+    &:after {
         display: none;
     }
 }
