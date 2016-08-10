@@ -4,3 +4,11 @@
 .inner {
     width: $primary-width;
 }
+
+.blog-box {
+    padding: 0;
+
+    &:before {
+        display: none;
+    }
+}
