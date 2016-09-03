@@ -1,47 +1,45 @@
 var $=jQuery;
 
-$.githubUser = function(username, gitpart, callback) {
-    $.getJSON('https://api.github.com/users/'+username+'/'+gitpart+'?callback=?',callback);
-}
-
 $.fn.loadGitInfos = function(username, gitpart) {
-    // Credit: http://yonaba.github.io/2012/08/14/List-your-GitHub-projects-using-JavaScript-and-jQuery.md.html
+    //Credit: http://yonaba.github.io/2012/08/14/List-your-GitHub-projects-using-JavaScript-and-jQuery.md.html
+
+    var goyippi_user = new Gh3.User(username);
 
     if (gitpart == 'gists') {
-        profil_url = 'https://gist.github.com/' + username;
+        var profil_url = 'https://gist.github.com/' + username;
+        var goyippi_gitinfo = new Gh3.Gists(goyippi_user);
     } else {
-        profil_url = 'https://github.com/' + username;
+        var profil_url = 'https://github.com/' + username;
+        var goyippi_gitinfo = new Gh3.Repositories(goyippi_user);
     }
 
-    this.html("<p class='ie-hidden'>Querying GitHub for " + username + "'s " + gitpart + "...</p><a href='" + profil_url + "' class='link-button'>View all " + gitpart + "</a>");
+    this.html("<p class='ie-hidden'>Querying GitHub for " + username + "'s " + gitpart + "...</p>");
 
     var target = this;
-    $.githubUser(username, gitpart, function(data) {
-        var gitparts = data.data; // JSON Parsing
-        //sortByName(gitparts);
+    var list = $('<dl/>');
+    target.empty().append(list);
 
-        var list = $('<dl/>');
-        target.empty().append(list);
-        $(gitparts).each(function() {
-            if (gitpart == 'gists') {
-                list.append('<dt><a href="'+ (this.homepage?this.homepage:this.html_url) +'">Gist ID: ' + this.id + '</a></dt>');
-            } else {
-                list.append('<dt><a href="'+ (this.homepage?this.homepage:this.html_url) +'">' + this.name + '</a> <em>'+(this.language?('('+this.language+')'):'')+'</em></dt>');
-            }
-            list.append('<dd>' + this.description + '</dd>');
-            /*if (gitpart == 'gists') {
-                $.each(this.files, function(i, item) {
-                    list.append('<em>' + item.filename + '</em>');
+    goyippi_gitinfo.fetch({page:1, per_page:5, direction : "desc"}, "next", function (err, res) {
+        if(err) { throw "outch ..." }
+
+        if (gitpart == 'gists') {
+            goyippi_gitinfo.eachGist(function (gist) {
+                list.append('<dt><a href="'+ gist.html_url +'">Gist ID: ' + gist.id + '</a></dt>');
+                list.append('<dd>' + gist.description + '</dd>');
+            });
+        } else {
+            goyippi_gitinfo.eachRepository(function(repos) {
+                var repo = new Gh3.Repository(repos.name, goyippi_user);
+
+                repo.fetch(function (err, res) {
+                    if(err) { throw "outch ..." }
+
+                    list.append('<dt><a href="'+ (repo.html_url) +'">' + repo.name + '</a>'+(repo.language?(' <em>('+repo.language+')</em>'):'')+'</dt>');
+                    list.append('<dd>' + repo.description + '</dd>');
                 });
-            }*/
-        });
+            });
+        }
     });
-
-    function sortByName(gitparts) {
-        gitparts.sort(function(a,b) {
-            return a.name - b.name;
-        });
-    }
 };
 
 $.fn.loadBlog = function(url) {
