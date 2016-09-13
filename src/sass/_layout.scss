@@ -55,7 +55,7 @@ body {
     @extend %clearfix;
     max-width: $primary-width;
     margin: 0 auto;
-    padding: $default-padding;
+    padding: $default-padding*2 $default-padding;
 }
 
 .col-1 {
@@ -151,7 +151,7 @@ h2, .h2 {
     letter-spacing: 0;
     color: $markup-color;
     @include color-animation(color);
-    margin: $default-padding/2 0 $default-padding;
+    margin: 0 0 $default-padding;
 }
 
 h3, .h3 {
@@ -291,9 +291,9 @@ label {
 .line {
     @extend .clear;
     height: 1px;
-    border-top: 1px solid $markup-color;
+    border-top: 3px solid $markup-color;
     @include color-animation(border-color);
-    margin: $default-padding/2 0;
+    margin: $default-padding*2 0;
 }
 
 // Blog Blox
@@ -399,9 +399,9 @@ label {
     padding: 0 $default-padding;
 
     .inner {
-        padding: $default-padding 0;
+        padding: $default-padding*2 0;
         margin: 0;
-        border-top: 1px solid $markup-color;
+        border-top: 3px solid $markup-color;
         @include color-animation(border-color);
     }
 }
