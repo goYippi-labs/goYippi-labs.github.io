@@ -298,7 +298,7 @@ label {
 
 // Blog Blox
 .blog-box {
-    padding: $default-padding/2 $default-padding;
+    padding: $default-padding $default-padding $default-padding/2;
     margin-top: $default-padding;
     position: relative;
 
