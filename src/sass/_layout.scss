@@ -38,8 +38,8 @@ $list: background-color, border-color, color;
 // General
 body {
     font-family: $font-stack;
-    font-size: 100%;
-    line-height: 1.375;
+    font-size: 1.094em;
+    line-height: 1.371;
     color: $primary-color;
     margin: 0;
     padding: 0;
@@ -107,7 +107,7 @@ a {
 a.link-button, a.more-link, .button-box a {
 	font-family: $font-stack;
     font-size: 1em;
-    line-height: 1.125;
+    line-height: 1.114;
     letter-spacing: 0.025em;
 	color: $inverted-color;
 	padding: 6px $default-padding/2;
@@ -135,8 +135,8 @@ a.link-button, a.more-link, .button-box a {
 // Textformats
 h1, .h1 {
     font-family: $font-stack;
-    font-size: 2.25em;
-    line-height: 1.11;
+    font-size: 2.229em;
+    line-height: 1.077;
     letter-spacing: 0;
     color: $markup-color;
     @include color-animation(color);
@@ -146,8 +146,8 @@ h1, .h1 {
 
 h2, .h2 {
     font-family: $font-stack;
-    font-size: 1.625em;
-    line-height: 1.231;
+    font-size: 1.6em;
+    line-height: 1.25;
     letter-spacing: 0;
     color: $markup-color;
     @include color-animation(color);
@@ -156,8 +156,8 @@ h2, .h2 {
 
 h3, .h3 {
     font-family: $font-stack;
-    font-size: 1.313em;
-    line-height: 1.238;
+    font-size: 1.314em;
+    line-height: 1.217;
     letter-spacing: 0;
     color: $markup-color;
     @include color-animation(color);
@@ -167,7 +167,7 @@ h3, .h3 {
 h4, .h4 {
     font-family: $font-stack;
     font-size: 1em;
-    line-height: 1.125;
+    line-height: 1.114;
     letter-spacing: 0;
     color: $markup-color;
     @include color-animation(color);
@@ -179,7 +179,7 @@ p, dd {
 }
 
 strong, b {
-    font-weight: bold;
+    font-weight: 700;
 }
 
 em, italic {
@@ -227,7 +227,7 @@ dt {
 input[type=text], input[type=email], input[type=password], input[type=url], textarea {
     font-family: $font-stack;
     font-size: 1em;
-    line-height: 1.375;
+    line-height: 1.371;
     color: $primary-color;
     border: 1px solid $markup-color;
     @include color-animation(border-color);
@@ -239,8 +239,8 @@ input[type=text], input[type=email], input[type=password], input[type=url], text
 
 textarea {
     font-family: $font-stack;
-    font-size: 0.813em;
-    line-height: 1.385;
+    font-size: 1em;
+    line-height: 1.371;
 	height: 120px;
 	max-width: 99%;
     border-top: 0;
@@ -253,8 +253,8 @@ input[type=radio], input[type=checkbox] {
 
 select {
     font-family: $font-stack;
-    font-size: 0.813em;
-    line-height: 1.385;
+    font-size: 0.857em;
+    line-height: 1.333;
 	width: 100%;
 
     option {
@@ -271,8 +271,8 @@ button, input[type=submit] {
 
 label {
     font-family: $font-stack;
-    font-size: 0.813em;
-    line-height: 1.385;
+    font-size: 0.857em;
+    line-height: 1.333;
     color: $primary-color;
 }
 
@@ -305,7 +305,7 @@ label {
     &:after {
         font-family: 'Material Icons';
         content:'\e0c9';
-        font-size: 3em;
+        font-size: 2.743em;
         color: $markup-color;
         @include color-animation(color);
         display: block;
@@ -356,7 +356,8 @@ label {
 
         &:after {
             content: '{ }';
-            font-size: 12.500em;
+            font-size: 11.429em;
+            font-weight: 700;
             display: block;
             position: absolute;
             right: 20px;
@@ -377,7 +378,7 @@ label {
     h1, .h1 {
         color: $inverted-color !important;
         text-align: left;
-        font-weight: bold;
+        font-weight: 700;
         margin: 0;
     }
 
