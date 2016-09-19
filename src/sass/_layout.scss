@@ -43,7 +43,6 @@ body {
     color: $primary-color;
     margin: 0;
     padding: 0;
-    letter-spacing: 0.01em;
     background-color: $inverted-color;
     box-sizing: border-box;
     font-kerning: normal;
@@ -108,7 +107,7 @@ a.link-button, a.more-link, .button-box a {
 	font-family: $font-stack;
     font-size: 1em;
     line-height: 1.114;
-    letter-spacing: 0.025em;
+    letter-spacing: 0.015em;
 	color: $inverted-color;
 	padding: 6px $default-padding/2;
 	background-color: $markup-color;
@@ -137,7 +136,6 @@ h1, .h1 {
     font-family: $font-stack;
     font-size: 1.882em;
     line-height: 1.063;
-    letter-spacing: 0;
     color: $markup-color;
     @include color-animation(color);
     margin: $default-padding/2 0 $default-padding;
@@ -147,7 +145,6 @@ h2, .h2 {
     font-family: $font-stack;
     font-size: 1.882em;
     line-height: 1.063;
-    letter-spacing: 0;
     color: $markup-color;
     @include color-animation(color);
     margin: 0 0 $default-padding;
@@ -157,7 +154,6 @@ h3, .h3 {
     font-family: $font-stack;
     font-size: 1.353em;
     line-height: 1.217;
-    letter-spacing: 0;
     color: $markup-color;
     @include color-animation(color);
     margin: $default-padding/2 0 $default-padding/2;
@@ -167,7 +163,6 @@ h4, .h4 {
     font-family: $font-stack;
     font-size: 1em;
     line-height: 1.114;
-    letter-spacing: 0;
     color: $markup-color;
     @include color-animation(color);
     margin: $default-padding/2 0 $default-padding/2;
