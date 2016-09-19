@@ -38,8 +38,8 @@ $list: background-color, border-color, color;
 // General
 body {
     font-family: $font-stack;
-    font-size: 1.094em;
-    line-height: 1.371;
+    font-size: 1.063em;
+    line-height: 1.412;
     color: $primary-color;
     margin: 0;
     padding: 0;
@@ -135,19 +135,18 @@ a.link-button, a.more-link, .button-box a {
 // Textformats
 h1, .h1 {
     font-family: $font-stack;
-    font-size: 2.229em;
-    line-height: 1.077;
+    font-size: 1.882em;
+    line-height: 1.063;
     letter-spacing: 0;
     color: $markup-color;
     @include color-animation(color);
-    text-align: center;
     margin: $default-padding/2 0 $default-padding;
 }
 
 h2, .h2 {
     font-family: $font-stack;
-    font-size: 1.6em;
-    line-height: 1.25;
+    font-size: 1.882em;
+    line-height: 1.063;
     letter-spacing: 0;
     color: $markup-color;
     @include color-animation(color);
@@ -156,7 +155,7 @@ h2, .h2 {
 
 h3, .h3 {
     font-family: $font-stack;
-    font-size: 1.314em;
+    font-size: 1.353em;
     line-height: 1.217;
     letter-spacing: 0;
     color: $markup-color;
@@ -226,8 +225,8 @@ dt {
 // Forms
 input[type=text], input[type=email], input[type=password], input[type=url], textarea {
     font-family: $font-stack;
-    font-size: 1em;
-    line-height: 1.371;
+    font-size: 1.063em;
+    line-height: 1.412;
     color: $primary-color;
     border: 1px solid $markup-color;
     @include color-animation(border-color);
@@ -239,8 +238,8 @@ input[type=text], input[type=email], input[type=password], input[type=url], text
 
 textarea {
     font-family: $font-stack;
-    font-size: 1em;
-    line-height: 1.371;
+    font-size: 1.063em;
+    line-height: 1.412;
 	height: 120px;
 	max-width: 99%;
     border-top: 0;
@@ -253,7 +252,7 @@ input[type=radio], input[type=checkbox] {
 
 select {
     font-family: $font-stack;
-    font-size: 0.857em;
+    font-size: 0.882em;
     line-height: 1.333;
 	width: 100%;
 
@@ -271,7 +270,7 @@ button, input[type=submit] {
 
 label {
     font-family: $font-stack;
-    font-size: 0.857em;
+    font-size: 0.882em;
     line-height: 1.333;
     color: $primary-color;
 }
@@ -305,7 +304,7 @@ label {
     &:after {
         font-family: 'Material Icons';
         content:'\e0c9';
-        font-size: 2.743em;
+        font-size: 2.824em;
         color: $markup-color;
         @include color-animation(color);
         display: block;
@@ -356,7 +355,7 @@ label {
 
         &:after {
             content: '{ }';
-            font-size: 11.429em;
+            font-size: 11.765em;
             font-weight: 700;
             display: block;
             position: absolute;
