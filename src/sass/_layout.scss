@@ -47,7 +47,6 @@ body {
     box-sizing: border-box;
     font-kerning: normal;
     -webkit-text-size-adjust: none;
-    -webkit-font-smoothing: antialiased;
 }
 
 .inner {
@@ -105,11 +104,11 @@ a {
 
 a.link-button, a.more-link, .button-box a {
 	font-family: $font-stack;
-    font-size: 1em;
-    line-height: 1.114;
-    letter-spacing: 0.015em;
+    font-size: 0.882em;
+	font-weight: 700;
+    letter-spacing: 0.025em;
 	color: $inverted-color;
-	padding: 6px $default-padding/2;
+    padding: 5px 15px 5px;
 	background-color: $markup-color;
 	@include color-animation(background-color);
     border-radius: 3px;
@@ -136,6 +135,7 @@ h1, .h1 {
     font-family: $font-stack;
     font-size: 1.882em;
     line-height: 1.063;
+    font-weight: 700;
     color: $markup-color;
     @include color-animation(color);
     margin: $default-padding/2 0 $default-padding;
@@ -145,6 +145,7 @@ h2, .h2 {
     font-family: $font-stack;
     font-size: 1.882em;
     line-height: 1.063;
+    font-weight: 700;
     color: $markup-color;
     @include color-animation(color);
     margin: 0 0 $default-padding;
@@ -154,18 +155,19 @@ h3, .h3 {
     font-family: $font-stack;
     font-size: 1.353em;
     line-height: 1.217;
+    font-weight: 400;
     color: $markup-color;
     @include color-animation(color);
-    margin: $default-padding/2 0 $default-padding/2;
+    margin: 0 0 $default-padding;
 }
 
 h4, .h4 {
     font-family: $font-stack;
     font-size: 1em;
     line-height: 1.114;
+    font-weight: 700;
     color: $markup-color;
     @include color-animation(color);
-    margin: $default-padding/2 0 $default-padding/2;
 }
 
 p, dd {
@@ -177,7 +179,7 @@ strong, b {
 }
 
 em, italic {
-    color: $secondary-color;
+    font-style: italic;
 }
 
 blockquote, .quote {
