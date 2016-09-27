@@ -300,6 +300,7 @@ label {
     padding: $default-padding $default-padding $default-padding/2;
     margin-top: $default-padding;
     position: relative;
+    z-index: 0;
 
     &:after {
         font-family: 'Material Icons';
@@ -326,6 +327,7 @@ label {
         width: 100%;
         height: 100%;
         opacity: 0.1;
+        z-index: -1;
         background-color: $markup-color;
         @include color-animation(background-color);
     }
