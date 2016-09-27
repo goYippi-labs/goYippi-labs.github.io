@@ -40,13 +40,18 @@ body {
     font-family: $font-stack;
     font-size: 1.063em;
     line-height: 1.412;
-    color: $primary-color;
+    color: $text-color;
     margin: 0;
     padding: 0;
-    background-color: $inverted-color;
+    background-color: $markup-color;
+    @include color-animation(background-color);
     box-sizing: border-box;
     font-kerning: normal;
     -webkit-text-size-adjust: none;
+}
+
+.content {
+    background-color: $white-color;
 }
 
 .inner {
@@ -84,19 +89,17 @@ a {
     @include color-animation(color);
     text-decoration: none;
     outline: none;
-    transition: color 0.25s;
 
     &:hover {
-        color: $primary-color !important;
+        color: $text-color !important;
         text-decoration: none;
         outline: none;
-        transition: color 0.25s;
     }
 }
 
 .col-1, .col-2 {
     a {
-        color: $secondary-color;
+        color: $link-color;
         animation: none;
         -webkit-animation: none;
     }
@@ -107,7 +110,7 @@ a.link-button, a.more-link, .button-box a {
     font-size: 0.882em;
 	font-weight: 700;
     letter-spacing: 0.025em;
-	color: $inverted-color;
+	color: $white-color;
     padding: 5px 15px 5px;
 	background-color: $markup-color;
 	@include color-animation(background-color);
@@ -118,8 +121,8 @@ a.link-button, a.more-link, .button-box a {
     transition: background-color 0.25s;
 
     &:hover {
-        color: $inverted-color !important;
-        background-color: $secondary-color !important;
+        color: $white-color !important;
+        background-color: $link-color !important;
         text-decoration: none;
     }
 }
@@ -224,10 +227,10 @@ input[type=text], input[type=email], input[type=password], input[type=url], text
     font-family: $font-stack;
     font-size: 1.063em;
     line-height: 1.412;
-    color: $primary-color;
+    color: $text-color;
     border: 1px solid $markup-color;
     @include color-animation(border-color);
-	background-color: $inverted-color;
+	background-color: $white-color;
 	width: 99%;
 	padding: 3px 6px 1px;
 	margin-bottom: 8px;
@@ -269,7 +272,7 @@ label {
     font-family: $font-stack;
     font-size: 0.882em;
     line-height: 1.333;
-    color: $primary-color;
+    color: $text-color;
 }
 
 // Divider
@@ -323,7 +326,6 @@ label {
         width: 100%;
         height: 100%;
         opacity: 0.1;
-        z-index: -1;
         background-color: $markup-color;
         @include color-animation(background-color);
     }
@@ -341,9 +343,7 @@ label {
 
 // Header
 .header {
-    color: $inverted-color;
-    background-color: $markup-color;
-    @include color-animation(background-color);
+    color: $white-color;
 
     .inner {
         position: relative;
@@ -372,7 +372,7 @@ label {
     }
 
     h1, .h1 {
-        color: $inverted-color !important;
+        color: $white-color !important;
         text-align: left;
         font-weight: 700;
         margin: 0;
@@ -395,10 +395,22 @@ label {
     margin: 0 auto;
     padding: 0 $default-padding;
 
+    a {
+        color: $white-color;
+        animation: none;
+        -webkit-animation: none;
+    }
+
+    p {
+        margin-bottom: 0;
+    }
+
     .inner {
         padding: $default-padding*2 0;
         margin: 0;
-        border-top: 3px solid $markup-color;
-        @include color-animation(border-color);
+
+        @media screen and (max-width: $breakpoint-medium) {
+            padding: 15px 0;
+        }
     }
 }
