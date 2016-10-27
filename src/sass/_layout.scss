@@ -462,11 +462,15 @@ label {
         color: $markup-color;
         background-color: #fff;
         border: 1px solid $markup-color;
+        display: none;
     }
 
     .inner {
-        padding-left: 0;
-        padding-right: 0;
+        padding: $default-padding 0;
+    }
+
+    .line {
+        margin: $default-padding 0;
     }
 
     .blog-box {
@@ -483,7 +487,7 @@ label {
         border-bottom: 3px solid $markup-color;
 
         .inner {
-            padding: 0 0 40px;
+            padding: 0 0 $default-padding;
 
             &:after {
                 display: none;
