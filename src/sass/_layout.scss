@@ -478,21 +478,18 @@ label {
         }
     }
 
-    .header, .footer {
+    .header {
+        background-color: $white-color;
+        border-bottom: 3px solid $markup-color;
+
         .inner {
-            padding-left: 0;
-            padding-right: 0;
+            padding: 0 0 40px;
 
             &:after {
                 display: none;
                 content: '';
             }
         }
-    }
-
-    .header {
-        background-color: $white-color;
-        border-bottom: 3px solid $markup-color;
 
         .logo {
             background-image: none;
