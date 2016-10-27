@@ -376,12 +376,25 @@ label {
         margin: 0;
     }
 
-    img {
-        max-height: 73px;
-        width: auto;
+    .logo {
+        background-image: url("../images/goyippi-labs-logo_small.png");
+        background-repeat: no-repeat;
+        background-size: 400px 80px;
+        height: 80px;
 
         @media screen and (max-width: $breakpoint-medium) {
-            max-height: 32px;
+            background-size: 160px 32px;
+            height: 32px;
+        }
+
+        img {
+            height: 80px;
+            visibility: hidden;
+            width: auto;
+
+            @media screen and (max-width: $breakpoint-medium) {
+                height: 32px;
+            }
         }
     }
 }
@@ -429,5 +442,70 @@ label {
         @media screen and (max-width: $breakpoint-medium) {
             padding: 15px 0;
         }
+    }
+}
+
+/*-- Background-Images for Retina Displays --*/
+@media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+	.a_header .logo {
+		background-image: url("../images/goyippi-labs-logo.png");
+	}
+}
+
+// Print
+@media print {
+    body {
+        font-size: 0.813em;
+    }
+
+    a.link-button, a.more-link, .button-box a {
+        color: $markup-color;
+        background-color: #fff;
+        border: 1px solid $markup-color;
+    }
+
+    .inner {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .blog-box {
+        padding: 0;
+
+         &:after {
+            top: -16px;
+            right: 0px;
+        }
+    }
+
+    .header, .footer {
+        .inner {
+            padding-left: 0;
+            padding-right: 0;
+
+            &:after {
+                display: none;
+                content: '';
+            }
+        }
+    }
+
+    .header {
+        background-color: $white-color;
+        border-bottom: 3px solid $markup-color;
+
+        .logo {
+            background-image: none;
+            height: auto;
+
+            img {
+                height: 48px;
+                visibility: visible;
+            }
+        }
+    }
+
+    .footer {
+        display: none;
     }
 }
