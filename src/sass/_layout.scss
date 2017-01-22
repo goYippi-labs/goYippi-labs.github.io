@@ -306,7 +306,7 @@ label {
         display: block;
         position: absolute;
         top: 4px;
-        right: 10px;
+        right: 18px;
 
         @media screen and (max-width: $breakpoint-small) {
             visibility: hidden;
@@ -325,6 +325,12 @@ label {
         z-index: -1;
         background-color: $markup-color;
         @include color-animation(background-color);
+    }
+}
+
+.goyippi-labs-blog {
+    &:after {
+        content:'\e86f';
     }
 }
 
