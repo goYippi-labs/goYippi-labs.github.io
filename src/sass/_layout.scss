@@ -353,7 +353,7 @@ label {
     .inner {
         position: relative;
         overflow: hidden;
-        padding: 39px $default-padding 34px;
+        padding: 40px $default-padding 35px;
 
         /*&:after {
             content: '{ }';
@@ -386,8 +386,8 @@ label {
     .logo {
         background-image: url("../images/goyippi-labs-logo_small.png");
         background-repeat: no-repeat;
-        background-size: 400px 80px;
-        height: 80px;
+        background-size: 370px 74px;
+        height: 74px;
 
         @media screen and (max-width: $breakpoint-medium) {
             background-size: 160px 32px;
@@ -395,7 +395,7 @@ label {
         }
 
         img {
-            height: 80px;
+            height: 74px;
             visibility: hidden;
             width: auto;
 
