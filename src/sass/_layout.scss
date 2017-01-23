@@ -355,7 +355,7 @@ label {
         overflow: hidden;
         padding: 39px $default-padding 34px;
 
-        &:after {
+        /*&:after {
             content: '{ }';
             font-size: 11.765em;
             font-weight: 700;
@@ -369,7 +369,7 @@ label {
                 content: '';
                 display: none;
             }
-        }
+        }*/
 
         @media screen and (max-width: $breakpoint-medium) {
             padding: 15px $default-padding 12px;
@@ -434,7 +434,7 @@ label {
         overflow: hidden;
         position: relative;
 
-        &:after {
+        /*&:after {
             content: '{ }';
             font-size: 11.765em;
             font-weight: 700;
@@ -448,7 +448,7 @@ label {
                 content: '';
                 display: none;
             }
-        }
+        }*/
 
         @media screen and (max-width: $breakpoint-medium) {
             padding: 15px 0;
@@ -500,10 +500,10 @@ label {
         .inner {
             padding: 0 0 $default-padding;
 
-            &:after {
+            /*&:after {
                 display: none;
                 content: '';
-            }
+            }*/
         }
 
         .logo {
