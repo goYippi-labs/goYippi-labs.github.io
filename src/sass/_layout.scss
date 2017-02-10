@@ -417,10 +417,14 @@ label {
 
     h2, .h2 {
         color: $white-color !important;
+        animation: none;
+        -webkit-animation: none;
     }
 
     a {
         color: $white-color !important;
+        animation: none;
+        -webkit-animation: none;
     }
 
     .header-content {
