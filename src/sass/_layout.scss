@@ -161,6 +161,10 @@ h1, .h1 {
     color: $markup-color;
     @include color-animation(color);
     margin: $default-padding/2 0 $default-padding;
+
+    @media screen and (max-width: $breakpoint-medium) {
+        font-size: 1.353em;
+    }
 }
 
 h2, .h2 {
@@ -171,6 +175,10 @@ h2, .h2 {
     color: $markup-color;
     @include color-animation(color);
     margin: 0 0 $default-padding;
+
+    @media screen and (max-width: $breakpoint-medium) {
+        font-size: 1.353em;
+    }
 }
 
 h3, .h3 {
@@ -181,6 +189,10 @@ h3, .h3 {
     color: $markup-color;
     @include color-animation(color);
     margin: 0 0 $default-padding;
+
+     @media screen and (max-width: $breakpoint-medium) {
+        font-size: 1.118em;
+    }
 }
 
 h4, .h4 {
@@ -423,8 +435,14 @@ label {
 
     a {
         color: $white-color !important;
+        opacity: 0.7;
         animation: none;
         -webkit-animation: none;
+
+        &:hover {
+            color: $text-color !important;
+            opacity: 1;
+        }
     }
 
     .header-content {
@@ -440,6 +458,12 @@ label {
                 max-width: 100%;
                 position: static;
             }
+        }
+
+        @media screen and (max-width: $breakpoint-medium) {
+            padding-top: $default-padding;
+            margin-top: $default-padding;
+            border-top: 3px solid $white-color;
         }
     }
 
