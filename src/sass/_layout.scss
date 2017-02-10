@@ -82,6 +82,26 @@ body {
     }
 }
 
+.col-60-30 {
+    .col-2 {
+        width: 65%;
+
+        @media screen and (max-width: $breakpoint-medium) {
+            width: 100%;
+            float: none;
+        }
+    }
+
+    .col-right {
+        width: 30%;
+
+        @media screen and (max-width: $breakpoint-medium) {
+            width: 100%;
+            float: none;
+        }
+    }
+}
+
 // Links & Buttons
 a {
     color: $markup-color;
@@ -349,11 +369,19 @@ label {
     color: $white-color;
     background-color: $markup-color;
     @include color-animation(background-color);
+    background-image: url(../images/home_back.gif);
+    background-repeat: repeat-x;
+    background-position: bottom left;
+    position: relative;
+
+    @media screen and (max-width: $breakpoint-big) {
+        background-image: none;
+    }
 
     .inner {
         position: relative;
         overflow: hidden;
-        padding: 40px $default-padding 35px;
+        padding: 40px $default-padding 85px;
 
         /*&:after {
             content: '{ }';
@@ -371,6 +399,10 @@ label {
             }
         }*/
 
+        @media screen and (max-width: $breakpoint-big) {
+            padding: 40px $default-padding 35px;
+        }
+
         @media screen and (max-width: $breakpoint-medium) {
             padding: 15px $default-padding 12px;
         }
@@ -381,6 +413,30 @@ label {
         text-align: left;
         font-weight: 700;
         margin: 0;
+    }
+
+    h2, .h2 {
+        color: $white-color !important;
+    }
+
+    a {
+        color: $white-color !important;
+    }
+
+    .header-content {
+        padding-top: 40px;
+
+        img {
+            position: absolute;
+            right: 20px;
+            bottom: 48px;
+            max-width: 28.846%;
+
+            @media screen and (max-width: $breakpoint-medium) {
+                max-width: 100%;
+                position: static;
+            }
+        }
     }
 
     .logo {
