@@ -34,9 +34,13 @@ $.fn.loadGitInfos = function(username, gitpart, items) {
 
                 repo.fetch(function (err, res) {
                     if(err) { throw "outch ..." }
+                    var homepage = '';
 
                     list.append('<dt><a href="'+ (repo.html_url) +'">' + repo.name + '</a>'+(repo.language?(' <em>('+repo.language+')</em>'):'')+'</dt>');
-                    list.append('<dd>' + repo.description + '</dd>');
+                    if ( repo.homepage ) {
+                        homepage = '<br /><a href="' + repo.homepage + '">» ' + repo.homepage + '</a>';
+                    }
+                    list.append('<dd>' + repo.description + homepage + '</dd>');
                 });
             });
         }

@@ -53,7 +53,7 @@ gulp.task('clean', function(){
 
 /* Build CSS & JSS */
 gulp.task('build', [ 'generate_css','generate_js','generate_templates' ] ,function(){
-    return require('fs').writeFile('version.txt', new Date());
+    return require('fs').writeFileSync('version.txt', new Date());
 });
 
 /* Default task */
