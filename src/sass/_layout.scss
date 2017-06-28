@@ -498,14 +498,28 @@ label {
     padding: 0 $default-padding;
     color: $white-color;
 
+    position: absolute;
+    top: 20px;
+    right: 50%;
+    margin-right: -500px;
+	text-align: right;
+
     a {
         animation: none;
         -webkit-animation: none;
-        color: $goyippi-light-grey;
+		color: $white-color;
 
-        &:hover {
-            color: $goyippi-light-tan !important;
-        }
+		&:hover {
+			color: $white-color !important;
+		}
+
+		@media screen and (max-width: $breakpoint-medium) {
+			color: $goyippi-light-grey;
+
+			&:hover {
+				color: $goyippi-light-tan !important;
+			}
+		}
     }
 
     p {
@@ -513,30 +527,24 @@ label {
     }
 
     .inner {
-        padding: $default-padding*2 0;
-        margin: 0;
-        overflow: hidden;
-        position: relative;
-
-        /*&:after {
-            content: '{ }';
-            font-size: 11.765em;
-            font-weight: 700;
-            display: block;
-            position: absolute;
-            right: 0;
-            bottom: 20px;
-            opacity: 0.4;
-
-            @media screen and (max-width: $breakpoint-medium) {
-                content: '';
-                display: none;
-            }
-        }*/
+		padding: 0;
 
         @media screen and (max-width: $breakpoint-medium) {
-            padding: 15px 0;
+        	margin: 0;
+        	overflow: hidden;
+        	position: relative;
+            padding: 40px 0;
         }
+    }
+
+	@media screen and (max-width: $breakpoint-big) {
+    	right: 0;
+    	margin-right: 0;
+    }
+
+	@media screen and (max-width: $breakpoint-medium) {
+    	position: static;
+		text-align: left;
     }
 }
 
