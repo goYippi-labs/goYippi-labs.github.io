@@ -21,7 +21,16 @@ $.fn.loadGitInfos = function(username, gitpart, items) {
     target.empty().append(list);
 
     goyippi_gitinfo.fetch({page:1, per_page:items, direction : "desc"}, "next", function (err, res) {
-        if(err) { throw "outch ..." }
+        if(err) {
+			throw "outch ..."
+			if (gitpart == 'gists') {
+				var url = 'https://gist.github.com/';
+			} else {
+				var url = 'https://github.com/';
+			}
+
+			list.append('<dt><a href="' + url + username + '" class="link-button">View all ' + gitpart + '</a></dt>');
+		}
 
         if (gitpart == 'gists') {
             goyippi_gitinfo.eachGist(function (gist) {

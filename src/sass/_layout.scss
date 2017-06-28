@@ -43,10 +43,14 @@ body {
     color: $text-color;
     margin: 0;
     padding: 0;
-    background-color: $goyippi-dark-grey;
+    background-color: $white-color;
     box-sizing: border-box;
     font-kerning: normal;
     -webkit-text-size-adjust: none;
+
+	@media screen and (max-width: $breakpoint-medium) {
+		background-color: $goyippi-dark-grey;
+	}
 }
 
 .content {
