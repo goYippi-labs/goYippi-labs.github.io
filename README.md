@@ -1,7 +1,7 @@
 # goYippi-labs
 The github page for goYippi labs
 
-http://goYippi-labs.github.io
+https://goYippi-labs.github.io
 
 
 A little static site built with gulp, SCSS and Jade.
