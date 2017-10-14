@@ -29,7 +29,7 @@ $.fn.loadGitInfos = function(username, gitpart, items) {
 				var url = 'https://github.com/';
 			}
 
-			list.append('<dt><a href="' + url + username + '" class="link-button">View all ' + gitpart + '</a></dt>');
+			//list.append('<dt><a href="' + url + username + '" class="link-button">View all ' + gitpart + '</a></dt>');
 		}
 
         if (gitpart == 'gists') {
