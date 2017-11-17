@@ -457,6 +457,10 @@ label {
     .header-content {
         padding-top: 40px;
 
+        .col-2 {
+            margin-bottom: 0;
+        }
+
         img {
             position: absolute;
             right: 20px;
