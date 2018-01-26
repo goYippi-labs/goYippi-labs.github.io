@@ -127,33 +127,27 @@ a {
         animation: none;
         -webkit-animation: none;
     }
-}
 
-a.link-button, a.more-link, .button-box a {
-	font-family: $font-stack;
-    font-size: 0.882em;
-	font-weight: 700;
-    letter-spacing: 0.025em;
-	color: $white-color;
-    padding: 5px 15px 5px;
-	background-color: $markup-color;
-	@include color-animation(background-color);
-    border-radius: 3px;
-    margin: $default-padding/2 0 $default-padding/2;
-    text-decoration: none;
-    display: inline-block;
-    transition: background-color 0.25s;
-
-    &:hover {
-        color: $white-color !important;
-        background-color: $link-color !important;
+    .link-button, .more-link, .button-box a {
+    	font-family: $font-stack;
+        font-size: 0.882em;
+    	font-weight: 700;
+        letter-spacing: 0.025em;
+    	color: $white-color;
+        padding: 5px 15px 5px;
+    	background-color: $markup-color;
+    	@include color-animation(background-color);
+        border-radius: 3px;
+        margin: $default-padding/2 0 $default-padding/2;
         text-decoration: none;
-    }
-}
+        display: inline-block;
+        transition: background-color 0.25s;
 
-.col-1, .col-2 {
-    a.link-button, a.more-link, .button-box a {
-	   @include color-animation(background-color);
+        &:hover {
+            color: $white-color !important;
+            background-color: $link-color !important;
+            text-decoration: none;
+        }
     }
 }
 
@@ -294,7 +288,7 @@ select {
 }
 
 button, input[type=submit] {
-    @extend a.link-button;
+    @extend .link-button;
 
 	padding-top: 8px;
     cursor: pointer;
@@ -573,12 +567,12 @@ label {
     body {
         font-size: 0.813em;
     }
-
-    a.link-button, a.more-link, .button-box a {
-        color: $markup-color;
-        background-color: #fff;
-        border: 1px solid $markup-color;
-        display: none;
+    .col-1, .col-2 {
+      .link-button, .more-link, .button-box a {
+          color: $markup-color ;
+          background-color: #fff;
+          border: 1px solid $markup-color;
+      }
     }
 
     .inner {
