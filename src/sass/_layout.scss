@@ -517,15 +517,7 @@ label {
       color: $white-color;
 
       &:hover {
-        color: $white-color !important;
-      }
-
-      @media screen and (max-width: $breakpoint-medium) {
-        color: $goyippi-light-grey;
-
-        &:hover {
-          color: $goyippi-light-tan !important;
-        }
+        color: $goyippi-light-tan !important;
       }
     }
 
@@ -540,6 +532,16 @@ label {
       margin-right: -500px;
       margin-bottom: 0;
       text-align: right;
+
+      a {
+        &:hover {
+          color: $white-color !important;
+
+          @media screen and (max-width: $breakpoint-medium) {
+            color: $goyippi-light-tan !important;
+          }
+        }
+      }
 
       @media screen and (max-width: $breakpoint-big) {
         right: 20px;
