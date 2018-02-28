@@ -37,24 +37,20 @@ $list: background-color, border-color, color;
 
 // General
 body {
-    font-family: $font-stack;
-    font-size: 1.063em;
-    line-height: 1.412;
-    color: $text-color;
-    margin: 0;
-    padding: 0;
-    background-color: $white-color;
-    box-sizing: border-box;
-    font-kerning: normal;
-    -webkit-text-size-adjust: none;
-
-	@media screen and (max-width: $breakpoint-medium) {
-		background-color: $goyippi-dark-grey;
-	}
+  font-family: $font-stack;
+  font-size: 1.063em;
+  line-height: 1.412;
+  color: $text-color;
+  margin: 0;
+  padding: 0;
+  background-color: $goyippi-dark-grey;
+  box-sizing: border-box;
+  font-kerning: normal;
+  -webkit-text-size-adjust: none;
 }
 
 .content {
-    background-color: $white-color;
+  background-color: $white-color;
 }
 
 .inner {
@@ -239,6 +235,10 @@ ol {
 img {
     max-width: 100%;
     height: auto;
+}
+
+.no-wrap {
+  white-space: nowrap;
 }
 
 #github-gists {
@@ -502,57 +502,70 @@ label {
     @extend %clearfix;
     max-width: $primary-width;
     margin: 0 auto;
-    padding: 0 $default-padding;
     color: $white-color;
 
-    position: absolute;
-    top: 20px;
-    right: 50%;
-    margin-right: -500px;
-	text-align: right;
+    h3 {
+      animation: none;
+      -webkit-animation: none;
+      font-weight: 700;
+      color: $white-color;
+    }
 
     a {
-        animation: none;
-        -webkit-animation: none;
-		color: $white-color;
+      animation: none;
+      -webkit-animation: none;
+      color: $white-color;
 
-		&:hover {
-			color: $white-color !important;
-		}
+      &:hover {
+        color: $white-color !important;
+      }
 
-		@media screen and (max-width: $breakpoint-medium) {
-			color: $goyippi-light-grey;
+      @media screen and (max-width: $breakpoint-medium) {
+        color: $goyippi-light-grey;
 
-			&:hover {
-				color: $goyippi-light-tan !important;
-			}
-		}
-    }
-
-    p {
-        margin-bottom: 0;
-    }
-
-    .inner {
-		padding: 0;
-
-        @media screen and (max-width: $breakpoint-medium) {
-        	margin: 0;
-        	overflow: hidden;
-        	position: relative;
-            padding: 40px 0;
+        &:hover {
+          color: $goyippi-light-tan !important;
         }
+      }
     }
 
-	@media screen and (max-width: $breakpoint-big) {
-    	right: 0;
-    	margin-right: 0;
+    .no-wrap {
+      margin-right: 10px;
     }
 
-	@media screen and (max-width: $breakpoint-medium) {
-    	position: static;
-		text-align: left;
+    .service {
+      position: absolute;
+      top: 20px;
+      right: 50%;
+      margin-right: -500px;
+      margin-bottom: 0;
+      text-align: right;
+
+      @media screen and (max-width: $breakpoint-big) {
+        right: 20px;
+        margin-right: 0;
+      }
+
+      @media screen and (max-width: $breakpoint-medium) {
+        position: static;
+        text-align: left;
+        border-top: 1px solid $white-color;
+        padding-top: 20px;
+      }
     }
+
+  .inner {
+    @media screen and (max-width: $breakpoint-medium) {
+    	margin: 0;
+    	overflow: hidden;
+    	position: relative;
+
+      .no-wrap {
+        display: block;
+        margin-right: 0;
+      }
+    }
+  }
 }
 
 /*-- Background-Images for Retina Displays --*/
