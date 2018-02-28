@@ -593,6 +593,7 @@ label {
     }
 
     .line {
+      border-color: $text-color;
         margin: $default-padding 0;
     }
 
@@ -607,7 +608,7 @@ label {
 
     .header {
         background-color: $white-color;
-        border-bottom: 3px solid $markup-color;
+        border-bottom: 3px solid $text-color;
 
         .inner {
             padding: 0 0 $default-padding;
@@ -630,6 +631,27 @@ label {
     }
 
     .footer {
-        display: none;
+				color: $text-color;
+				border-top: 3px solid $text-color;
+
+				h3 {
+					color: $text-color;
+				}
+
+				a {
+		        color: $text-color;
+
+		        &:hover {
+		            color: $text-color !important;
+		        }
+		    }
+
+				.no-wrap {
+					display: block;
+				}
+
+				.service {
+					display: none;
+				}
     }
 }
