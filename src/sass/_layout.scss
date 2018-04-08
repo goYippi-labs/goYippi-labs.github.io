@@ -515,6 +515,8 @@ label {
       animation: none;
       -webkit-animation: none;
       color: $white-color;
+      display: inline-block;
+      margin: 0 0 0 16px;
 
       &:hover {
         color: $goyippi-light-tan !important;
