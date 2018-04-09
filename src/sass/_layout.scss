@@ -602,7 +602,6 @@ label {
       -webkit-animation: none;
       color: $white-color;
       display: inline-block;
-      margin: 0 0 0 16px;
 
       &:hover {
         color: $goyippi-light-tan !important;
@@ -622,6 +621,8 @@ label {
       text-align: right;
 
       a {
+        margin: 0 0 0 16px;
+
         &:hover {
           color: $white-color !important;
 
