@@ -623,6 +623,10 @@ label {
       a {
         margin: 0 0 0 16px;
 
+        @media screen and (max-width: $breakpoint-medium) {
+          margin: 0 16px 0 0;
+        }
+
         &:hover {
           color: $white-color !important;
 
