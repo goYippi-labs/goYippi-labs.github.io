@@ -4,7 +4,7 @@ The github page for goYippi labs
 https://goYippi-labs.github.io
 
 
-A little static site built with gulp, SCSS and Jade.
+A little static site built with gulp, SCSS and Pug.
 
 ---
 
