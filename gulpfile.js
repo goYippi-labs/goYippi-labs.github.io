@@ -35,14 +35,6 @@ gulp.task('generate_templates', function() {
     // Your options in here.
   }))
   .pipe(gulp.dest('./'))
-
-    //var YOUR_LOCALS = {};
-
-    /*gulp.src(src + '/*.jade')
-        .pipe(jade({
-            locals: YOUR_LOCALS
-        }))
-        .pipe(gulp.dest('./'))*/
 });
 
 /* Watch CSS & Js */
