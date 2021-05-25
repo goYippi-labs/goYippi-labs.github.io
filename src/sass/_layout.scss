@@ -586,8 +586,6 @@ label {
 // Footer
 .footer {
     @extend %clearfix;
-    max-width: $primary-width;
-    margin: 0 auto;
     color: $white-color;
 
     h3 {
