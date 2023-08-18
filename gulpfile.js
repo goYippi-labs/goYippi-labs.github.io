@@ -39,9 +39,9 @@ gulp.task('generate_templates', function() {
 
 /* Watch CSS & Js */
 gulp.task('watch', function() {
-    gulp.watch(src + '/**/*.scss', ['generate_css']);
-    gulp.watch(src + '/**/*.js', ['generate_js']);
-    gulp.watch(src + '/**/*.pug', ['generate_templates']);
+    gulp.watch(src + '/**/*.scss', gulp.series('generate_css'));
+    gulp.watch(src + '/**/*.js', gulp.series('generate_js'));
+    gulp.watch(src + '/**/*.pug', gulp.series('generate_templates'));
 });
 
 /* Clean files */
